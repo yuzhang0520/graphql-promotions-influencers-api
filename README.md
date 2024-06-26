@@ -35,8 +35,8 @@ The API schema includes the following types:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yuzhang0520/graphql-promotion-management.git
-   cd graphql-promotion-management
+   git clone https://github.com/yuzhang0520/graphql-promotions-influencers-api.git
+   cd graphql-promotions-influencers-api
 2. Install dependencies:
    ```bash
    npm install
@@ -76,7 +76,7 @@ The following are some example queries and mutations you can run in the GraphQL 
        name
        email
      }
-    }
+   }
   }
 - **Add a new promotion:**
   ```graphql

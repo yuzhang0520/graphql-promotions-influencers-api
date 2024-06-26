@@ -4,11 +4,12 @@ This project is an interactive GraphQL API that allows users to retrieve and upd
 
 ## Table of Contents
 
-- [Schema](wiki#schema)
+- [Schema](#schema)
 - [Installation](#installation)
 - [Usage](#usage)
   - [Queries and Mutations](#queries-and-mutations)
 
+<a name="schema"></a>
 ## Schema
 
 The API schema includes the following types:
@@ -31,6 +32,7 @@ The API schema includes the following types:
 - **PromotionInfluencer**: Indicates which influencers are involved in each promotion campaign.
   - Fields: `id`, `promotion_id`, `influencer_id`.
 
+<a id="custom_anchor_name"></a>
 ## Installation
 
 1. Clone the repository:

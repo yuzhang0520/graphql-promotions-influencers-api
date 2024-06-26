@@ -4,7 +4,7 @@ This project is an interactive GraphQL API that allows users to retrieve and upd
 
 ## Table of Contents
 
-- [Schema](#schema)
+- [Schema](wiki#schema)
 - [Installation](#installation)
 - [Usage](#usage)
   - [Queries and Mutations](#queries-and-mutations)

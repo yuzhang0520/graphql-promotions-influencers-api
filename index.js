@@ -188,6 +188,195 @@ const resolvers = {
     }
 }
 
+/*
+query ContentQuery($id: ID!){
+  content(id: $id) {
+    id,
+    content_type,
+    likes
+  }
+}
+query ProductQuery($id: ID!){
+  product(id: $id) {
+    id,
+    name,
+    description
+  }
+}
+{
+    "id": "1"
+}
+
+{
+  "promotion_id": "1"
+}
+query findPromotionByPorduct($product_id: ID!){
+  findPromotionsByProduct(product_id: $product_id) {
+    id
+  }
+}
+{
+  "product_id": "2"
+}
+query promotionInfluencer($influencer_id: ID!){
+  findPromotionByInfluencer(influencer_id: $influencer_id){
+    id
+  }
+}
+{
+  "influencer_id": "1"
+}
+
+query FindPromotionById($promotion_id: ID!) {
+  promotion(id: $promotion_id) {
+    id
+    company
+    promotion_budget
+    start_date_time
+    end_date_time
+    influencers {
+      id
+      name
+    }
+    contents {
+      id
+      content_type
+      views
+      likes
+      comments
+      creation_date_time
+      promotion {
+        id
+      }
+      products {
+        name
+      }
+    }
+    products {
+      id
+      name
+      description
+      }
+    }
+  }
+}
+{
+  "promotion_id": "1"
+}
+
+query findInfluencerById($influencerId: ID!){
+  influencer(id: $influencerId) {
+    id
+    name
+    contents {
+      id
+      views
+    }
+    promotions {
+      company
+      promotion_budget
+    }
+  }
+}
+{
+  "influencerId": "1"
+}
+query findProductById($productId: ID!){
+  product(id: $productId) {
+    id
+    name
+    description
+    promotions {
+      id
+      company
+      promotion_budget
+    }
+    influencers {
+      name
+      email
+    }
+    contents {
+      id
+      views
+      likes
+    }
+  }
+}
+{
+  "productId": "1"
+}
+
+mutation addPrmotion($promotion: AddPromotionInput!){
+  addPromotion(promotion: $promotion){
+    company,
+    promotion_budget,
+    start_date_time,
+    end_date_time
+  }
+}
+{
+  "promotion": {
+    "company": "New Company",
+    "promotion_budget": 50000,
+    "start_date_time": "2022-07-01T00:00:00Z",
+    "end_date_time": "2022-07-15T23:59:59Z"
+  }
+}
+
+mutation createProduct($product: CreateProductInput!){
+  createProduct(product: $product) {
+    name,
+    description
+  }
+}
+{
+  "product":{
+    "name": "New Product"
+    "description": "New product description"
+  }
+}
+
+mutation addProductToPromotion($promotionProduct: AddProductToPromotionInput!){
+  addProductToPromotion(promotionProduct: $promotionProduct) {
+    id
+    promotion_id
+    product_id
+  }
+}
+{
+  "promotionProduct": {
+    "promotion_id": 1,
+    "product_id": 4
+  }
+}
+
+mutation addInfluencerToPromotion($promotionInfluencer: AddInfluencerToPromotionInput!){
+  addInfluencerToPromotion(promotionInfluencer: $promotionInfluencer) {
+    id
+    promotion_id
+    influencer_id
+  }
+}
+}
+{
+  "promotionInfluencer": {
+    "promotion_id": 1,
+    "influencer_id": 5
+  }
+}
+
+mutation removeInfluencerFromPromotion($removeInfluencerFromPromotionId: ID!){
+  removeInfluencerFromPromotion(id: $removeInfluencerFromPromotionId) {
+    id
+    promotion_id
+    influencer_id
+  }
+}
+{
+  "removeInfluencerFromPromotionId": 5
+}
+
+*/
 // SERVER SETUP
 const server = new ApolloServer({
     // typeDefs - from schema.js
